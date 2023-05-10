@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+declare var $: any;
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,18 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'laptop';
+
+  ngOnInit(): void {
+
+    $(document).ready(function(){
+      let body = <HTMLDivElement> document.body;
+      let script = document.createElement('script');
+      script.innerHTML = '';
+      script.src = '../assets/js/script.js';
+      script.async = true;
+      script.defer = true;
+      body.appendChild(script);
+    })
+
+  }
 }

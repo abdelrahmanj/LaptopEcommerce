@@ -1,0 +1,31 @@
+<div class="img-wrapper">
+    <div class="front">
+        <a routerLink="/Item-Details/{{abdo.ItemId}}"><img alt=""
+                [src]="abdo.ImageName"
+                class="img-fluid blur-up lazyload bg-img"></a>
+    </div>
+    <div class="back">
+        <a routerLink="/Item-Details/{{abdo.ItemId}}"><img alt=""
+                [src]="abdo.ImageName"
+                class="img-fluid blur-up lazyload bg-img"></a>
+    </div>
+    <div class="cart-detail">
+        <button data-toggle="modal" data-target="#addtocart"
+            title="Add to cart"><i class="ti-shopping-cart"></i></button> <a
+            href="javascript:void(0)" title="Add to Wishlist"><i
+                class="ti-heart" aria-hidden="true"></i></a> <a href="#"
+            data-toggle="modal" data-target="#quick-view" title="Quick View"><i
+                class="ti-search" aria-hidden="true"></i></a> <a
+            href="compare.html" title="Compare"><i class="ti-reload"
+                aria-hidden="true"></i></a></div>
+</div>
+<div class="product-info">
+    <div class="rating"><i class="fa fa-star"></i> <i class="fa fa-star"></i> <i
+            class="fa fa-star"></i> <i class="fa fa-star"></i> <i
+            class="fa fa-star"></i></div>
+    <a routerLink="/Item-Details/{{abdo.ItemId}}">
+        <h6>{{abdo.ItemName | lowercase}}</h6>
+    </a>
+    <h4>{{abdo.SalesPrice | currency: 'EGP'}}</h4>
+    <h4>{{abdo.CategoryName | titlecase}}</h4>
+</div>
